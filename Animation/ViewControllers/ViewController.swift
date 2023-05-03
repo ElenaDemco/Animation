@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet var animationView: SpringView!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet weak var animationView: SpringView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Private Properties
     private var animation = Animation.getRandomValue()
