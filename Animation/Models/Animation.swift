@@ -9,9 +9,9 @@ struct Animation {
     
     let preset: String
     let curve: String
-    let force: Double
-    let duration: Double
-    let delay: Double
+    let force: Float
+    let duration: Float
+    let delay: Float
     
     var description: String {
         """
@@ -28,9 +28,9 @@ struct Animation {
         Animation(
             preset: DataStore.shared.presets.randomElement()?.rawValue ?? "pop",
             curve: DataStore.shared.curves.randomElement()?.rawValue ?? "easeIn",
-            force: Double.random(in: 0.8...3),
-            duration: Double.random(in: 2...4),
-            delay: Double.random(in: 0.5...1)
+            force: Float.random(in: 0.8...3),
+            duration: Float.random(in: 2...4),
+            delay: Float.random(in: 0.5...1)
         )
     }
 }
