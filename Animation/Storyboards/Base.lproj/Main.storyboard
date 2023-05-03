@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odX-7F-8Kg" userLabel="Board">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odX-7F-8Kg" userLabel="Board" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="40" y="67" width="230" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-9o-eSW">
-                                        <rect key="frame" x="8" y="15" width="81" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-9o-eSW" customClass="SpringLabel" customModule="SpringAnimation">
+                                        <rect key="frame" x="16" y="15" width="81" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                                 <color key="backgroundColor" red="0.4588235021" green="0.49019610879999997" blue="0.67450982329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="DUy-9o-eSW" firstAttribute="leading" secondItem="odX-7F-8Kg" secondAttribute="leading" constant="8" id="X8D-hI-aWr"/>
+                                    <constraint firstItem="DUy-9o-eSW" firstAttribute="leading" secondItem="odX-7F-8Kg" secondAttribute="leading" constant="16" id="X8D-hI-aWr"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DUy-9o-eSW" secondAttribute="trailing" constant="20" symbolic="YES" id="cc2-qP-9Cr"/>
                                     <constraint firstAttribute="height" constant="150" id="uvO-h9-AUW"/>
                                     <constraint firstItem="DUy-9o-eSW" firstAttribute="top" secondItem="odX-7F-8Kg" secondAttribute="top" constant="15" id="yeu-lb-V2m"/>
@@ -41,7 +41,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-ko-bOg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-ko-bOg" customClass="SpringButton" customModule="SpringAnimation">
                                 <rect key="frame" x="40" y="483.5" width="230" height="33"/>
                                 <color key="backgroundColor" red="0.4588235021" green="0.49019610879999997" blue="0.67450982329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -54,6 +54,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EIF-ao-wY9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -67,6 +70,10 @@
                             <constraint firstItem="XA5-ko-bOg" firstAttribute="width" secondItem="odX-7F-8Kg" secondAttribute="width" id="qls-xf-pgZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="odX-7F-8Kg" id="OID-nq-h2d"/>
+                        <outlet property="descriptionLabel" destination="DUy-9o-eSW" id="ElP-01-Jax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
