@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func runButtonPressed(_ sender: SpringButton) {
+        animation = Animation.getRandomValue()
         
         descriptionLabel.text = animation.description
         
@@ -33,11 +34,8 @@ class ViewController: UIViewController {
         animationView.force = CGFloat(animation.force)
         animationView.duration = CGFloat(animation.duration)
         animationView.delay = CGFloat(animation.delay)
-        
         animationView.animate()
-        
-        animation = Animation.getRandomValue()
-        
+    
         sender.setTitle("Run \(animation.preset)", for: .normal)
     }
 }
