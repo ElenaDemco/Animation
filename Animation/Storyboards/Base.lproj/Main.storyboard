@@ -21,7 +21,7 @@
                                 <rect key="frame" x="40" y="67" width="230" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-9o-eSW" customClass="SpringLabel" customModule="SpringAnimation">
-                                        <rect key="frame" x="16" y="15" width="81" height="20.5"/>
+                                        <rect key="frame" x="16" y="65" width="198" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -30,10 +30,10 @@
                                 <color key="backgroundColor" red="0.4588235021" green="0.49019610879999997" blue="0.67450982329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="DUy-9o-eSW" firstAttribute="centerY" secondItem="odX-7F-8Kg" secondAttribute="centerY" id="VfT-yN-4my"/>
                                     <constraint firstItem="DUy-9o-eSW" firstAttribute="leading" secondItem="odX-7F-8Kg" secondAttribute="leading" constant="16" id="X8D-hI-aWr"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DUy-9o-eSW" secondAttribute="trailing" constant="20" symbolic="YES" id="cc2-qP-9Cr"/>
+                                    <constraint firstAttribute="trailing" secondItem="DUy-9o-eSW" secondAttribute="trailing" constant="16" id="feU-LI-TTO"/>
                                     <constraint firstAttribute="height" constant="150" id="uvO-h9-AUW"/>
-                                    <constraint firstItem="DUy-9o-eSW" firstAttribute="top" secondItem="odX-7F-8Kg" secondAttribute="top" constant="15" id="yeu-lb-V2m"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
