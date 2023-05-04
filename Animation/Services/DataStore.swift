@@ -13,4 +13,6 @@ final class DataStore {
     
     let presets: [AnimationPreset] = AnimationPreset.allCases
     let curves: [AnimationCurve] = AnimationCurve.allCases
+    
+    private init() {}
 }
