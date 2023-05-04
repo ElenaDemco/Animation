@@ -11,8 +11,8 @@ final class DataStore {
     
     static let shared = DataStore()
     
-    let presets: [AnimationPreset] = AnimationPreset.allCases
-    let curves: [AnimationCurve] = AnimationCurve.allCases
+    let presets = AnimationPreset.allCases
+    let curves = AnimationCurve.allCases
     
     private init() {}
 }
